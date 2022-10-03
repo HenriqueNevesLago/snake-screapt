@@ -1,14 +1,11 @@
-import {
-  update as updateSnake,
-  draw,
-  SNAKE_SPEED,
-  snakeBody,
-} from "./snake.js";
+import { update as updateSnake, draw, snakeBody } from "./snake.js";
 import { updateFood, drawFood } from "./food.js";
+import { scorboard } from "./scorboard.js";
 
 const gameBoard = document.getElementById("game-zone");
 
 let lastRenderTime = 0;
+export let SNAKE_SPEED = 3;
 
 requestAnimationFrame(main);
 
@@ -21,6 +18,7 @@ function main(currentTime) {
   drawSnake();
   updateFood();
   drawFood(gameBoard);
+  scorboard();
   switch (snakeBody.length) {
     case 5:
       SNAKE_SPEED = 4;
@@ -30,6 +28,9 @@ function main(currentTime) {
       break;
     case 10:
       SNAKE_SPEED = 6;
+      break;
+    case 15:
+      SNAKE_SPEED = 8;
       break;
   }
 }

@@ -1,33 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 body {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    margin: 0;
-    background-color: #ccc;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #ccc;
 }
-.board {
-    width: 50vw;
+body section {
+  display: flex;
+}
+body section aside {
+  height: 90%;
+  width: 10%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #242424;
+  color: #ccc;
+  position: absolute;
+  right: 0;
+  margin: 0 10%;
+}
+body nav p {
+  font-size: 32px;
+  margin: 7px;
 }
 
 #game-zone {
-    background-color: #242424;
+  background-color: #242424;
 
-    width: 45vw;
-    height: 90vh;
+  width: 45vw;
+  height: 90vh;
 
-    display: grid;
-    grid-template-columns: repeat(29, auto);
-    grid-template-rows: repeat(29, auto);
+  display: grid;
+  grid-template-columns: repeat(29, auto);
+  grid-template-rows: repeat(29, auto);
 }
 
 .snake {
-    background-color: #6fc355;
+  background-color: #6fc355;
 }
 
 .food {
-    background-color: #d84242;
+  background-color: #d84242;
 }
